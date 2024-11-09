@@ -49,6 +49,7 @@ nav{
 }
 
 nav a{
+    color: var(--highlighted-color);
     display: inline-block;
     margin: auto 2rem;
     text-align: right;
@@ -57,6 +58,12 @@ nav a{
 nav a:visited{
     color: var(--highlighted-color);
 }
+@media (max-width: 768px) {
+    nav{
+        text-align: center;
+    }
+}
+
 
 /* MAIN */
 main{
@@ -75,6 +82,7 @@ footer {
     letter-spacing: 0.3px;
     padding: 0 2rem;
     text-align: right;
+    margin: 0 0;
 }
 
 footer a {
@@ -91,6 +99,17 @@ footer div {
     width: auto;
     vertical-align: middle;
     text-align: right;
+}
+@media (max-width: 768px) {
+    footer div{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    footer a{
+        display: none;
+    }
 }
 
 footer div p {
@@ -138,8 +157,7 @@ h1{
     margin: 0 auto;
     font-weight: 700;
 }
-@media(max-width:480px)
-{
+@media(max-width:480px){
     .boton{
         width: 60%;
     }
@@ -173,12 +191,9 @@ form label {
     margin-bottom: 1rem;
     text-align: center;
 }
-
 .label-checkbox {
     width:30%;
 }
-
-
 form input[type="text"],
 form input[type="file"],
 form select {
@@ -192,14 +207,11 @@ form select {
     margin: 1.5rem auto;
     appearance: none;
 }
-@media(max-width:480px)
-{
+@media(max-width:480px){
     form input[type="text"],
     form input[type="file"],
     form select {
         width: 60%;
-        
-        
     }
     .label-checkbox {
         width:60%;
@@ -227,10 +239,12 @@ form input[type="submit"] {
 .card > div {
     width: 40%;
     float: left; /* Para que la imagen flote a la izquierda */
+    text-align: center;
 }
 
 .card img {
     max-width: 100%;
+    
 }
 
 .card > div:last-child {
@@ -266,3 +280,62 @@ form input[type="submit"] {
     margin: 0 auto;
     text-align: center;
 }
+
+/* Cards responsivas */
+@media (max-width: 768px) {
+    .card>div{
+        width: 40%;
+        float: none;
+        margin: 0 auto;
+    }
+    .card > div:last-child {
+        float: none;
+        text-align: center;
+        width: 80%; 
+        margin: 0 auto;
+    }
+    .card h2 {
+        color: var(--highlighted-color);
+        text-transform: uppercase;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 2rem 0 1rem 0;
+        text-align: center; /* Alineación a la izquierda */
+        width: auto; /* Evitar el límite de ancho que causa el problema */
+    }
+}
+
+/* Página de verificación de reservas */
+table{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid var(--header-color);
+    /* border-collapse: collapse; */
+    border-radius: 10px;
+}
+tbody{
+    border-radius: 100px;
+}
+table tr td{
+    text-align: left;
+    border: 1px solid var(--header-color);
+    vertical-align: middle;
+    padding: 0.5rem 1rem;
+    
+}
+table tr:nth-child(even){
+    background-color: #F0F0F0;
+}
+table .boton{
+    width: 90%;
+}
+.aprobar{
+    background-color: green;
+    margin-bottom: 0.5rem;
+    border: none;
+}
+.denegar{
+    background-color: red;
+    border: none;
+}
+
