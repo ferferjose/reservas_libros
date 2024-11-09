@@ -68,7 +68,7 @@ main{
 
 /* FOOTER */
 footer {
-    width: 100%;
+    max-width: 100%;
     background-color: var(--header-color);
     height: 10vh;
     color: var(--page-color);
