@@ -58,10 +58,9 @@ nav a:visited{
     color: var(--highlighted-color);
 }
 
-
-
 /* MAIN */
 main{
+    min-height: 80vh;
     font-family: "Poppins", serif;
     font-size: 1.3rem;
 }
@@ -106,7 +105,6 @@ footer div svg {
     margin-right: 3px;
 }
 
-
 /* Clases Generales */
 .container{
     width: 80%;
@@ -130,12 +128,15 @@ h1{
     padding: 1rem;
     background-color: var(--highlighted-color);
     color: var(--page-color);
-    font-weight: 700;
     font-size: 1.3rem;
     border: var(--header-color);
     border-radius: 10px;
     text-align: center;
-    width: 50%;
+    width: 30%;
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    font-weight: 700;
 }
 .boton:hover{
     transition: 1s;
@@ -144,6 +145,42 @@ h1{
 }
 .boton:visited{
     color: var(--page-color);
+}
+
+.mtb-2 {
+    margin: 2rem auto;
+}
+
+/* Estilo del formulario */
+form {
+    width: 100%;
+}
+
+form label {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+form input[type="text"],
+form input[type="file"],
+form select {
+    width: 30%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--highlighted-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: 35%;
+    appearance: none;
+}
+
+form input[type="submit"] {
+    font-weight: 700;
 }
 
 /* Pagina de inicio */
