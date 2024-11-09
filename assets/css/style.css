@@ -138,6 +138,14 @@ h1{
     margin: 0 auto;
     font-weight: 700;
 }
+@media(max-width:480px)
+{
+    .boton{
+        width: 60%;
+    }
+    
+}
+
 .boton:hover{
     transition: 1s;
     background-color: var(--header-color);
@@ -154,6 +162,7 @@ h1{
 /* Estilo del formulario */
 form {
     width: 100%;
+    margin:0 auto;
 }
 
 form label {
@@ -165,18 +174,37 @@ form label {
     text-align: center;
 }
 
+.label-checkbox {
+    width:30%;
+}
+
+
 form input[type="text"],
 form input[type="file"],
 form select {
     width: 30%;
     padding: 0.8rem;
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
     border: 1px solid var(--highlighted-color);
     border-radius: 5px;
     box-sizing: border-box;
-    margin-left: 35%;
+    display: block;
+    margin: 1.5rem auto;
     appearance: none;
+}
+@media(max-width:480px)
+{
+    form input[type="text"],
+    form input[type="file"],
+    form select {
+        width: 60%;
+        
+        
+    }
+    .label-checkbox {
+        width:60%;
+    }
+    
 }
 
 form input[type="submit"] {
