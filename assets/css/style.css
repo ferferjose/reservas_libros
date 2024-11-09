@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+/* Variables de uso */
 :root {
     --page-color: #fefeff;
     --text-color: #000;
@@ -7,6 +7,7 @@
     --highlighted-color: #0078B7;
 }
 
+/* Uso general para el formato */
 *::before, *::after, html{
     box-sizing: border-box;
 }
@@ -15,7 +16,7 @@ html{
     font-family: sans-serif;
 }
 
-/* ---------- HEADER ----------*/
+/*  HEADER */
 
 header{
     background-color: var(--header-color);
@@ -57,12 +58,56 @@ nav a:visited{
     color: var(--highlighted-color);
 }
 
+
+
 /* MAIN */
 main{
     font-family: "Poppins", serif;
     font-size: 1.3rem;
 }
 
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: var(--header-color);
+    height: 10vh;
+    color: var(--page-color);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    padding: 0 2rem;
+    text-align: right;
+}
+
+footer a {
+    margin-right: 2rem;
+    text-decoration: none;
+    text-align: left;
+    color: var(--page-color);
+    line-height: 10vh; /* Alineación vertical */
+    float: left;
+}
+
+footer div {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    text-align: right;
+}
+
+footer div p {
+    display: inline-block;
+    margin: 0 1rem;
+    line-height: 10vh; /* Alineación vertical */
+    text-align: right;
+}
+
+footer div svg {
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+
+/* Clases Generales */
 .container{
     width: 80%;
     -webkit-box-shadow: -4px 4px 7px 3px rgba(0,0,0,0.04);
@@ -81,6 +126,27 @@ h1{
     text-align: center;
     margin: 0rem 0 2rem 0;
 }
+.boton{
+    padding: 1rem;
+    background-color: var(--highlighted-color);
+    color: var(--page-color);
+    font-weight: 700;
+    font-size: 1.3rem;
+    border: var(--header-color);
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+}
+.boton:hover{
+    transition: 1s;
+    background-color: var(--header-color);
+    border: var(--highlighted-color);
+}
+.boton:visited{
+    color: var(--page-color);
+}
+
+/* Pagina de inicio */
 .card {
     width: 65%;
     margin: 2rem auto;
@@ -134,23 +200,4 @@ h1{
 .card > div:last-child div{
     margin: 0 auto;
     text-align: center;
-}
-.boton{
-    padding: 1rem;
-    background-color: var(--highlighted-color);
-    color: var(--page-color);
-    font-weight: 700;
-    font-size: 1.3rem;
-    border: var(--header-color);
-    border-radius: 10px;
-    text-align: center;
-    width: 50%;
-}
-.boton:hover{
-    transition: 1s;
-    background-color: var(--header-color);
-    border: var(--highlighted-color);
-}
-.boton:visited{
-    color: var(--page-color);
 }
