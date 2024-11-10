@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Libros</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <?php
+        require_once "header.php";
+    ?>
+    <nav class="mb-2">
+        <a href="paneladmin.php">Panel de administración</a>
+    </nav>
+    <main>
+        <div class="tabla">
+            <div class="container">
+            
+                <h1>Gestión de Libros</h1>
+                <form action="panelAdmin.php">
+                    <!-- Estos checkbox necesitan el libro y el isbn junto con la editorial -->
+                    <label class="label-checkbox"><input type="checkbox"> 1 SMR</label>
+                    <label class="label-checkbox"><input type="checkbox"> 2 SMR</label>
+                    <label class="label-checkbox"><input type="checkbox"> 1 DAW</label>
+                    <label class="label-checkbox"><input type="checkbox"> 2 DAW</label>
+
+                    <input class="boton mbt-2" type="submit" value="Eliminar">
+                </form>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
