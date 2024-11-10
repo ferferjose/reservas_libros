@@ -10,26 +10,32 @@
 <body>
     <?php
         require_once "header.php";
-        require_once "nav.php";
     ?>
+    <nav class="mb-2">
+    <a href="paneladmin.php">Panel de administración</a>
+    </nav>
     <main>
-        <div class="container">
-            <h1>Gestión de Libros</h1>
-            <form action="panelAdmin.php">
-                <input type="text" placeholder="Nombre del libro">
-                <input type="text" placeholder="Editorial">
-                <input type="text" placeholder="ISBN">
-                <input type="text" placeholder="Precio">
-
+        <div class="tabla">
+            <div class="container">
             
-                <label class="label-checkbox"><input type="checkbox"> 1 SMR</label>
-                <label class="label-checkbox"><input type="checkbox"> 2 SMR</label>
-                <label class="label-checkbox"><input type="checkbox"> 1 DAW</label>
-                <label class="label-checkbox"><input type="checkbox"> 2 DAW</label>
+                <h1>Gestión de Libros</h1>
+                <form action="panelAdmin.php">
+                    <input type="text" placeholder="Nombre del libro">
+                    <input type="text" placeholder="Editorial">
+                    <input type="text" placeholder="ISBN">
+                    <input type="text" placeholder="Precio">
 
-                <input class="boton mbt-2" type="submit" value="Añadir">
-            </form>
+                
+                    <label class="label-checkbox"><input type="checkbox"> 1 SMR</label>
+                    <label class="label-checkbox"><input type="checkbox"> 2 SMR</label>
+                    <label class="label-checkbox"><input type="checkbox"> 1 DAW</label>
+                    <label class="label-checkbox"><input type="checkbox"> 2 DAW</label>
+
+                    <input class="boton mbt-2" type="submit" value="Añadir">
+                </form>
+            </div>
         </div>
+
     </main>
     
     <?php

@@ -13,19 +13,22 @@
             require_once 'nav.php';
         ?>
         <main>
-            <div class="container">
-                <h1>Confirmar Reserva</h1>
-                <form action="confirmarReserva.php" method="post">
-                    <label for="precio">Precio total de tu reserva</label>
-                    <input type="text" id="precio" name="precio" readonly>
-                    
-                    <label for="justificante">Adjuntar Justificante de Pago</label>
-                    <input type="file" id="justificante" name="justificante">
-                    
-                    <input type="submit" class="boton mtb-2">
-                    <a href="reservaLibros2.php" class="boton mtb-2">Volver atrás</a>
-                </form>
+            <div class="tabla">
+                <div class="container">
+                    <h1>Confirmar Reserva</h1>
+                    <form action="confirmarReserva.php" method="post">
+                        <label for="precio">Precio total de tu reserva</label>
+                        <input type="text" id="precio" name="precio" readonly>
+                        
+                        <label for="justificante">Adjuntar Justificante de Pago</label>
+                        <input type="file" id="justificante" name="justificante">
+                        
+                        <input type="submit" class="boton mtb-2">
+                        <a href="reservaLibros2.php" class="boton mtb-2">Volver atrás</a>
+                    </form>
+                </div>
             </div>
+            
         </main>
         <?php
             require_once 'footer.php';

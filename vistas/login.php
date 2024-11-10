@@ -14,19 +14,21 @@
         require_once './header.php'
         ?>
         <main>
-            <div class="container">
-                <h1>INICIAR SESIÓN</h1>
-                <button class="boton google-login">
-                    <img src="../assets/img/google.png" alt="Google Logo">
-                    Iniciar sesión con Google
-                </button>
-                <hr class="divider">
-                <form action="#" method="post">
-                    <input type="email" name="email" placeholder="Correo" required>
-                    <input type="password" name="password" placeholder="Contraseña" required>
-                    <input type="submit" class="boton" value="Iniciar sesion">
-                </form>
-                <a href="./registro.php" class="registrar">Registrarse</a>
+            <div class="tabla">
+                <div class="container">
+                    <h1>INICIAR SESIÓN</h1>
+                    <button class="boton google-login">
+                        <img src="../assets/img/google.png" alt="Google Logo">
+                        Iniciar sesión con Google
+                    </button>
+                    <hr class="divider">
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Correo" required>
+                        <input type="password" name="password" placeholder="Contraseña" required>
+                        <input type="submit" class="boton" value="Iniciar sesion">
+                    </form>
+                    <a href="./registro.php" class="registrar">Registrarse</a>
+                </div>
             </div>
         </main>
         <!-- Footer de la pagina -->

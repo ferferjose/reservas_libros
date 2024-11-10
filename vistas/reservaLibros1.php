@@ -13,22 +13,24 @@
             require_once 'nav.php';
         ?>
         <main>
-            <div class="container">
-                <h1>Reserva Libros</h1>
-                <form action="reservaLibros2.php" method="post">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre">
-                    <label for="cursos">Selecciona el curso al que perteneces</label>
-                    <select name="cursos" id="cursos">
-                        <option value="" disabled selected>Selecciona un curso</option>
-                        <option value="">1DAW</option>
-                        <option value="">2DAW</option>
-                        <option value="">1SMR</option>
-                        <option value="">2SMR</option>
-                    </select>
-                    
-                    <input type="submit" class="boton mtb-2" value="Siguiente">
-                </form>
+            <div class="tabla">
+                <div class="container">
+                    <h1>Reserva Libros</h1>
+                    <form action="reservaLibros2.php" method="post">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre">
+                        <label for="cursos">Selecciona el curso al que perteneces</label>
+                        <select name="cursos" id="cursos">
+                            <option value="" disabled selected>Selecciona un curso</option>
+                            <option value="">1DAW</option>
+                            <option value="">2DAW</option>
+                            <option value="">1SMR</option>
+                            <option value="">2SMR</option>
+                        </select>
+                        
+                        <input type="submit" class="boton mtb-2" value="Siguiente">
+                    </form>
+                </div>
             </div>
         </main>
         <?php

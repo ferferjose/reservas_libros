@@ -12,6 +12,7 @@
         <?php
         require_once './header.php'?>
         <main>
+        <div class="tabla">
             <div class="container">
                 <h1>REGISTRARSE</h1>
                 <form action="#" method="post">
@@ -22,6 +23,8 @@
                 </form>
                 <a href="./login.php" class="registrar">Iniciar Sesión</a>
             </div>
+        </div>
+            
         </main>
         
         <!-- Footer de la pagina -->

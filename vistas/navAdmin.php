@@ -1,3 +1,3 @@
-<footer>
+<nav>
     <a href="paneladmin.html">Panel de administración</a>
-</footer>
+</nav>

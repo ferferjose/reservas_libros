@@ -67,10 +67,12 @@ nav a:visited{
 
 /* MAIN */
 main{
+    width: 100%;
     margin: 2rem auto;
     min-height: 80vh;
     font-family: "Poppins", serif;
     font-size: 1.3rem;
+    display: table;
 }
 
 /* FOOTER */
@@ -127,22 +129,34 @@ footer div svg {
 
 /* Clases Generales */
 .container{
-    width: 80%;
+    max-width: 80%;
     -webkit-box-shadow: -4px 4px 7px 3px rgba(0,0,0,0.04);
     -moz-box-shadow: -4px 4px 7px 3px rgba(0,0,0,0.08);
     box-shadow: -4px 4px 7px 3px rgba(0,0,0,0.08);
     border: 1px solid var(--header-color);
     border-radius: 5px;
     padding: 2rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    
+    
+    margin: 0 auto;
+}
+.tabla{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 h1{
     color: var(--highlighted-color);
     text-transform: uppercase;
     font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0rem 0 2rem 0;
+}
+h2{
+    color: var(--highlighted-color);
+    text-transform: uppercase;
+    font-size: 2.2rem;
     font-weight: 700;
     text-align: center;
     margin: 0rem 0 2rem 0;
@@ -161,7 +175,7 @@ h1{
     margin: 0 auto;
     font-weight: 700;
 }
-@media(max-width:480px){
+@media(max-width:768px){
     .boton{
         width: 80%;
     }
@@ -180,6 +194,9 @@ h1{
 .mtb-2 {
     margin: 2rem auto;
 }
+.mb-2{
+    margin-bottom: 2rem;
+}
 
 /* Estilo del formulario */
 form {
@@ -197,6 +214,7 @@ form label {
 }
 .label-checkbox {
     width:30%;
+    text-align: left;
 }
 form input[type="text"],
 form input[type="file"],
@@ -217,7 +235,7 @@ form input[type="email"],
 form input[type="password"]{
     font-weight: bold;
 }
-@media(max-width:480px){
+@media(max-width:768px){
     form input[type="text"],
     form input[type="file"],
     form input[type="email"],
@@ -349,6 +367,11 @@ table .boton{
     border: none;
 }
 
+/* Confirmar Recepción */
+.tableConfirmar{
+    font-size: 1.3rem;
+}
+
 /* Login */
 
 .google-login {
@@ -362,13 +385,14 @@ table .boton{
     width: 30%;
     margin-bottom: 15px;
 }
+hr{
+    width: 35%;
+}
 @media (max-width: 768px) {
     .google-login{
         width: 80%;
     }
-    hr{
-        width: 35%;
-    }
+
 }
 
 .google-login img {
