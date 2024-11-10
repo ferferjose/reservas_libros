@@ -67,6 +67,7 @@ nav a:visited{
 
 /* MAIN */
 main{
+    margin: 2rem auto;
     min-height: 80vh;
     font-family: "Poppins", serif;
     font-size: 1.3rem;
@@ -133,7 +134,10 @@ footer div svg {
     border: 1px solid var(--header-color);
     border-radius: 5px;
     padding: 2rem;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 h1{
     color: var(--highlighted-color);
@@ -151,7 +155,7 @@ h1{
     border: var(--header-color);
     border-radius: 10px;
     text-align: center;
-    width: 30%;
+    width: 40%;
     text-decoration: none;
     display: block;
     margin: 0 auto;
@@ -159,7 +163,7 @@ h1{
 }
 @media(max-width:480px){
     .boton{
-        width: 60%;
+        width: 80%;
     }
     
 }
@@ -196,6 +200,8 @@ form label {
 }
 form input[type="text"],
 form input[type="file"],
+form input[type="email"],
+form input[type="password"],
 form select {
     width: 30%;
     padding: 0.8rem;
@@ -207,18 +213,23 @@ form select {
     margin: 1.5rem auto;
     appearance: none;
 }
+form input[type="email"],
+form input[type="password"]{
+    font-weight: bold;
+}
 @media(max-width:480px){
     form input[type="text"],
     form input[type="file"],
+    form input[type="email"],
+    form input[type="password"],
     form select {
-        width: 60%;
+        width: 80%;
     }
     .label-checkbox {
-        width:60%;
+        width:80%;
     }
     
 }
-
 form input[type="submit"] {
     font-weight: 700;
 }
@@ -304,11 +315,10 @@ form input[type="submit"] {
         width: auto; /* Evitar el límite de ancho que causa el problema */
     }
 }
-
 /* Página de verificación de reservas */
 table{
     width: 90%;
-    margin: 0 auto;
+    margin: 1rem auto;
     border: 1px solid var(--header-color);
     /* border-collapse: collapse; */
     border-radius: 10px;
@@ -339,3 +349,45 @@ table .boton{
     border: none;
 }
 
+/* Login */
+
+.google-login {
+    background-color: #4285f4;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 30%;
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    .google-login{
+        width: 80%;
+    }
+    hr{
+        width: 35%;
+    }
+}
+
+.google-login img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 3%;
+}
+.registrar {
+    display: block;
+    margin-top: 50px;
+    color: var(--highlighted-color);
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left;
+}
+.registrar:hover {
+    text-decoration: underline;
+}
+.registrar:active{
+    color: var(--highlighted-color);
+}
