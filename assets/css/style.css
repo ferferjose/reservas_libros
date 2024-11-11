@@ -181,15 +181,16 @@ h2{
     }
     
 }
+.boton:visited{
+    color: var(--page-color);
+}
 
 .boton:hover{
     transition: 1s;
     background-color: var(--header-color);
     border: var(--highlighted-color);
 }
-.boton:visited{
-    color: var(--page-color);
-}
+
 
 .mtb-2 {
     margin: 2rem auto;
