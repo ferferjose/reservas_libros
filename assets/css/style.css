@@ -136,8 +136,7 @@ footer div svg {
     border: 1px solid var(--header-color);
     border-radius: 5px;
     padding: 2rem;
-    
-    
+    overflow: hidden;
     margin: 0 auto;
 }
 .tabla{
@@ -161,6 +160,9 @@ h2{
     text-align: center;
     margin: 0rem 0 2rem 0;
 }
+.boton:visited{
+    color: var(--page-color);
+}
 .boton{
     padding: 1rem;
     background-color: var(--highlighted-color);
@@ -181,44 +183,10 @@ h2{
     }
     
 }
-.boton:visited{
-    color: var(--page-color);
-}
-
 .boton:hover{
     transition: 1s;
     background-color: var(--header-color);
     border: var(--highlighted-color);
-}
-
-
-.mtb-2 {
-    margin: 2rem auto;
-}
-.mb-2{
-    margin-bottom: 2rem;
-}
-.bred{
-    border: 1px solid red;
-    color: red;
-}
-.bred:visited {
-    color: red; /* Asegúrate de que el color sea el mismo que el normal */
-}
-.bred:hover {
-    color: var(--page-color);
-    background-color: red;
-}
-.bgreen {
-    border: 1px solid green;
-    color: green;
-}
-.bgreen:visited {
-    color: green; /* Asegúrate de que el color sea el mismo que el normal */
-}
-.bgreen:hover {
-    color: var(--page-color);
-    background-color: green;
 }
 
 /* Estilo del formulario */
@@ -234,6 +202,7 @@ form label {
     color: var(--text-color);
     margin-bottom: 1rem;
     text-align: center;
+    margin: 1rem auto;
 }
 .label-checkbox {
     width:30%;
@@ -253,9 +222,6 @@ form select {
     display: block;
     margin: 1.5rem auto;
     appearance: none;
-}
-form input[type="email"],
-form input[type="password"]{
     font-weight: bold;
 }
 @media(max-width:768px){
@@ -322,7 +288,6 @@ form input[type="submit"] {
 
 .card a {
     text-decoration: none;
-    color: var(--highlighted-color);
     font-weight: bold;
     display: inline-block;
     margin: 0 auto;
@@ -389,7 +354,22 @@ table .boton{
     background-color: red;
     border: none;
 }
-
+@media (max-width: 768px) {
+    #verificarReservas{
+        font-size: 0.8rem;
+        margin: 0 auto;
+    }
+    #verificarReservas tr td{
+        padding: 0.5rem 0.5rem;
+    }
+    
+}
+@media (max-width: 468px) {
+    #verificarReservas tr td{
+        padding: 0.3rem 0.5rem;
+    }
+    
+}
 /* Confirmar Recepción */
 .tableConfirmar{
     font-size: 1.3rem;
@@ -443,4 +423,41 @@ hr{
 .enlaceAdmin{
     background: transparent;
     /* color: var(--highlighted-color); */
+}
+
+
+
+/* Clases generales de uso */
+
+
+.mtb-2 {
+    margin: 2rem auto;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.mt-2{
+    margin-top: 2rem;
+}
+.bred{
+    border: 1px solid red;
+    color: red;
+}
+.bred:visited {
+    color: red; /* Asegúrate de que el color sea el mismo que el normal */
+}
+.bred:hover {
+    color: var(--page-color);
+    background-color: red;
+}
+.bgreen {
+    border: 1px solid green;
+    color: green;
+}
+.bgreen:visited {
+    color: green; /* Asegúrate de que el color sea el mismo que el normal */
+}
+.bgreen:hover {
+    color: var(--page-color);
+    background-color: green;
 }
