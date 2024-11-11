@@ -197,6 +197,28 @@ h2{
 .mb-2{
     margin-bottom: 2rem;
 }
+.bred{
+    border: 1px solid red;
+    color: red;
+}
+.bred:visited {
+    color: red; /* Asegúrate de que el color sea el mismo que el normal */
+}
+.bred:hover {
+    color: var(--page-color);
+    background-color: red;
+}
+.bgreen {
+    border: 1px solid green;
+    color: green;
+}
+.bgreen:visited {
+    color: green; /* Asegúrate de que el color sea el mismo que el normal */
+}
+.bgreen:hover {
+    color: var(--page-color);
+    background-color: green;
+}
 
 /* Estilo del formulario */
 form {
@@ -414,4 +436,10 @@ hr{
 }
 .registrar:active{
     color: var(--highlighted-color);
+}
+
+/* Panel admin */
+.enlaceAdmin{
+    background: transparent;
+    /* color: var(--highlighted-color); */
 }

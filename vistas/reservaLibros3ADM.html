@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Panel Administrador</title>
+        <title>Confirmar Reserva</title>
         <link rel="stylesheet" href="../assets/css/reset.css">
         <link rel="stylesheet" href="../assets/css/style.css">
     </head>
@@ -18,25 +18,20 @@
         <main>
             <div class="tabla">
                 <div class="container">
-                    <h1>Panel Administrador</h1>
-                    <hr>
-
-                    <div>
-                        <h2>Gestion de libros</h2>
-                        <a href="gestionLibros.html" class="boton mb-2 enlaceAdmin bgreen">Añadir libros</a>
-                        <a href="eliminarLibros.html" class="boton mb-2 enlaceAdmin bred">Eliminar libros</a>
-                    </div>
-                    <div>
-                        <h2>Hacer reservas</h2>
-                        <a href="reservaLibros1ADM.html" class="boton mb-2 enlaceAdmin bgreen">Realizar reserva</a>
-                    </div>
-                    <div>
-                        <h2>Gestión de reservas</h2>
-                        <a href="verificarReservas.html" class="boton mb-2">Verificar reserva</a>
-                        <a href="confirmarReservas.html" class="boton mb-2">Confirmar entrega</a>
-                    </div>
+                    <h1>Confirmar Reserva</h1>
+                    <form action="confirmarReserva.php" method="post">
+                        <label for="precio">Precio total de tu reserva</label>
+                        <input type="text" id="precio" name="precio" readonly>
+                        
+                        <label for="justificante">Adjuntar Justificante de Pago</label>
+                        <input type="file" id="justificante" name="justificante">
+                        
+                        <input type="submit" class="boton mtb-2">
+                        <a href="reservaLibros2ADM.html" class="boton mtb-2">Volver atrás</a>
+                    </form>
                 </div>
             </div>
+            
         </main>
         <footer>
             <a href="panelAdmin.html">Panel de administración</a>

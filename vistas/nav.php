@@ -1,5 +1,5 @@
 <nav>
-<a href="inico.php">Inico</a>
-<a href="reservaLibros1.php">Realizar reserva</a>
-<a href="">Ver reservas</a>
+    <a href="inico.html">Inico</a>
+    <a href="reservaLibros1User.html">Realizar reserva</a>
+    <a href="verReservasUser.html">Ver reservas</a>
 </nav>
