@@ -220,7 +220,7 @@ form select {
     border-radius: 5px;
     box-sizing: border-box;
     display: block;
-    margin: 1.5rem auto;
+    margin: 3rem auto;
     appearance: none;
     font-weight: bold;
 }
@@ -240,6 +240,7 @@ form select {
 form input[type="submit"] {
     font-weight: 700;
 }
+
 
 /* Pagina de inicio */
 .card {
