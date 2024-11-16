@@ -9,8 +9,7 @@
 *.user
 *.userosscache
 *.sln.docstates
-/modelo/conexion.php
-/modelo/configDb.php
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
