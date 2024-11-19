@@ -1,15 +1,13 @@
 <?php
-    require_once '../modelo/conexion.php';
-
     class Usuarios{
         private $email;
         private $pw;
-        public $pwBd;
-
+        private $pwBd;
         private $conexion;
 
         public function __construct(){
-            $this->conexion = new Conexion();
+            require_once '../modelo/conexion.php';
+            $this->conexion = $conexion;
         }
 
         public function login($email, $password) {
@@ -18,24 +16,65 @@
         
             $this->pwBd = $this->obtenerContraseñaBd();
         
-            if ($this->pwBd && password_verify($this->pw, $this->pwBd))
+            if ($this->pwBd && password_verify($this->pw, $this->pwBd)){
+                $this->sesionInicio();
                 return true;
+            }
             else
                 return false;
         }
 
-        public function obtenerContraseñaBd (){
-            $sql = "SELECT contraseña FROM usuarios WHERE email = :email";
+        public function registro($email, $password, $password2){
+            $sql = "SELECT * FROM usuarios WHERE email = '".$email."'";
 
-            $resultado = $this->conexion->prepare($sql);
+            $resultado = $this->conexion->query($sql);
+            if(!$resultado){
+                if($password === $password2){
+                    $this->pw = password_hash($password, PASSWORD_DEFAULT);
+                    if($this->insertarUsuario()){
+                        $this->sesionInicio();
+                        return true;
+                    }
+                }  
+                return false;
+            }
+            return false;
+        }
 
-            $resultado->bindParam(':email',$this->email);
+        private function obtenerContraseñaBd (){
+            $sql = "SELECT contrasenia FROM usuarios WHERE email = '".$this->email."'";
 
-            $resultado->execute();
+            $resultado = $this->conexion->query($sql);
 
-            $resultado = $resultado->fetch(PDO::FETCH_ASSOC);
+            if($resultado->num_rows > 0) {
+                $fila = $resultado->fetch_assoc();
+                return $fila['contrasenia'];
+            }
+        }
 
-            return $resultado['contraseña'];
+        private function sesionInicio() {
+            $sql = "SELECT * FROM usuarios WHERE email = '".$this->email."'";
+
+            $resultado = $this->conexion->query($sql);
+            if($resultado->num_rows > 0) {
+                $fila = $resultado->fetch_assoc();
+                session_start();
+                $_SESSION['id'] = $fila['idUsuario'];
+                $_SESSION['rol'] = $fila['rol'];
+            }
+            
+        }
+
+        private function insertarUsuario() {
+
+            $sql = "INSERT INTO usuarios (correo,contrasenia) VALUES ('$this->email','$this->pw')";
+
+            $resultado = $this->conexion->query($sql);
+
+            if($resultado){
+                return true;
+            }
+            return false;
         }
     }
 ?>
