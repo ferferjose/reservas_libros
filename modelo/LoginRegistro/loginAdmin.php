@@ -1,6 +1,5 @@
 <?php
-    require_once '../controladores/Administradores.php';
-    require_once '../conexion.php';
+    require_once '../../controladores/Administradores.php';
 
     if(!empty($_POST['usuario']) && !empty($_POST['password'])){
         $usuario = $_POST['usuario'];

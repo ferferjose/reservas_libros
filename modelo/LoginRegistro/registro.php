@@ -1,6 +1,5 @@
 <?php
-    require_once '../controladores/Usuarios.php';
-    require_once '../conexion.php';
+    require_once '../../controladores/Usuarios.php';
 
     if(!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password2'])){
         $email = $_POST['email'];

@@ -18,7 +18,7 @@
                         Registrarse con Google
                     </button>
                     <hr>
-                    <form action="../modelo/LoginRegistro/registro.php" method="get">
+                    <form action="../modelo/LoginRegistro/registro.php" method="POST">
                         <input type="email" name="email" placeholder="Correo" required>
                         <input type="password" name="password" placeholder="Contraseña" required>
                         <input type="password" name="password2" placeholder="Repetir contraseña" required>
