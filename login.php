@@ -18,7 +18,7 @@
                         Iniciar sesión con Google
                     </button>
                     <hr class="divider">
-                    <form action="./modelo/LoginRegistro/login.php" method="POST">
+                    <form action="../modelo/LoginRegistro/login.php" method="POST">
                         <input type="email" name="email" placeholder="Correo" required>
                         <input type="password" name="password" placeholder="Contraseña" required>
                         <input type="submit" class="boton" value="Iniciar sesion">

@@ -6,7 +6,7 @@
         private $conexion;
 
         public function __construct(){
-            require_once '../modelo/conexion.php';
+            require_once __DIR__ . '/../modelo/conexion.php';
             $this->conexion = $conexion;
         }
 
@@ -25,10 +25,12 @@
         }
 
         public function registro($email, $password, $password2){
-            $sql = "SELECT * FROM usuarios WHERE email = '".$email."'";
+            $this->email = $email;
+
+            $sql = "SELECT * FROM usuarios WHERE email = '".$this->email."'";
 
             $resultado = $this->conexion->query($sql);
-            if(!$resultado){
+            if($resultado->num_rows <= 0){
                 if($password === $password2){
                     $this->pw = password_hash($password, PASSWORD_DEFAULT);
                     if($this->insertarUsuario()){
