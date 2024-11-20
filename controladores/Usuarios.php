@@ -27,7 +27,7 @@
         public function registro($email, $password, $password2){
             $this->email = $email;
 
-            $sql = "SELECT * FROM usuarios WHERE email = '".$this->email."'";
+            $sql = "SELECT * FROM usuarios WHERE correo = '".$this->email."'";
 
             $resultado = $this->conexion->query($sql);
             if($resultado->num_rows <= 0){
@@ -44,7 +44,7 @@
         }
 
         private function obtenerContraseñaBd (){
-            $sql = "SELECT contrasenia FROM usuarios WHERE email = '".$this->email."'";
+            $sql = "SELECT contrasenia FROM usuarios WHERE correo = '".$this->email."'";
 
             $resultado = $this->conexion->query($sql);
 
@@ -52,10 +52,11 @@
                 $fila = $resultado->fetch_assoc();
                 return $fila['contrasenia'];
             }
+            return null;
         }
 
         private function sesionInicio() {
-            $sql = "SELECT * FROM usuarios WHERE email = '".$this->email."'";
+            $sql = "SELECT * FROM usuarios WHERE correo = '".$this->email."'";
 
             $resultado = $this->conexion->query($sql);
             if($resultado->num_rows > 0) {
@@ -71,12 +72,7 @@
 
             $sql = "INSERT INTO usuarios (correo,contrasenia) VALUES ('$this->email','$this->pw')";
 
-            $resultado = $this->conexion->query($sql);
-
-            if($resultado){
-                return true;
-            }
-            return false;
+            return $this->conexion->query($sql);
         }
     }
 ?>

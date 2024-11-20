@@ -1,18 +1,23 @@
 <?php
-    require_once __DIR__ . '/../../controladores/Usuarios.php';
+define("RUTA", $_SERVER['DOCUMENT_ROOT'] . '/ReservaLibros/reservas_libros/');
 
-    if(!empty($_POST['email']) && !empty($_POST['password'])){
-        $email = $_POST['email'];
-        $pw = $_POST['password'];
+require_once RUTA . 'assets/config/config.php';
+require_once RUTA . 'controladores/Usuarios.php';
 
-        $objUsuario = new Usuarios();
+if (!empty($_POST['email']) && !empty($_POST['password'])) {
+    $email = $_POST['email'];
+    $pw = $_POST['password'];
 
-        if($objUsuario->login($email,$pw)){
-            header('Location: ../vistas/inicio.php');
-            exit;
-        }else{
-            echo 'Correo o contraseña incorrectos';
-        }
-    }else{
-        echo 'Correo o contraseña no rellenados';
+    $objUsuario = new Usuarios();
+
+    if ($objUsuario->login($email, $pw)) {
+        echo "Login exitoso. Redirigiendo...";
+        header('location: ../../vistas/inicio.php');
+        exit;
+    } else {
+        header('location: ../../vistas/panelAdmin.php');
     }
+} else {
+    echo 'Correo o contraseña no rellenados';
+}
+?>
