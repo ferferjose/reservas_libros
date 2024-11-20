@@ -1,5 +1,5 @@
 <?php
-    require_once '../../controladores/Usuarios.php';
+    require_once __DIR__ . '/../../controladores/Usuarios.php';
 
     if(!empty($_POST['email']) && !empty($_POST['password'])){
         $email = $_POST['email'];
@@ -8,7 +8,8 @@
         $objUsuario = new Usuarios();
 
         if($objUsuario->login($email,$pw)){
-            header('location: ../vistas/inicio.php');
+            header('Location: ../vistas/inicio.php');
+            exit;
         }else{
             echo 'Correo o contraseña incorrectos';
         }

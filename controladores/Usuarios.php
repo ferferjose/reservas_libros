@@ -15,7 +15,7 @@
             $this->pw = $password;
         
             $this->pwBd = $this->obtenerContraseñaBd();
-        
+            
             if ($this->pwBd && password_verify($this->pw, $this->pwBd)){
                 $this->sesionInicio();
                 return true;
