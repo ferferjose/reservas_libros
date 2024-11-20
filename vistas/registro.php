@@ -24,7 +24,7 @@
                         <input type="password" name="password2" placeholder="Repetir contraseña" required>
                         <input type="submit" class="boton">
                     </form>
-                    <a href="../index.html" class="registrar">Iniciar Sesión</a>
+                    <a href="../login.php" class="registrar">Iniciar Sesión</a>
                 </div>
             </div>
         </main>

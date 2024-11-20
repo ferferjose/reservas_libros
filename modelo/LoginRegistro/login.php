@@ -8,7 +8,7 @@
         $objUsuario = new Usuarios();
 
         if($objUsuario->login($email,$pw)){
-            header('location: ../vistas/reservaLibros1User.php');
+            header('location: ../vistas/inicio.php');
         }else{
             echo 'Correo o contraseña incorrectos';
         }

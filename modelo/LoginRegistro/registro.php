@@ -9,11 +9,9 @@
         $objUsuario = new Usuarios();
 
         if($objUsuario->registro($email,$pw,$pw2)){
-            header('location: ../vistas/reservaLibros1User.php');
-            exit;
+            header('location: ../../vistas/inicio.php');
         }else{
             header('location: ../../login.php');
-            exit;
         }
     }else{
         echo 'No se ha rellenado algun campo';
