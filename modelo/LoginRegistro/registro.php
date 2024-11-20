@@ -9,10 +9,10 @@
         $objUsuario = new Usuarios();
 
         if($objUsuario->registro($email,$pw,$pw2)){
-            header('Location: ../vistas/reservaLibros1User.php');
+            header('location: ../vistas/reservaLibros1User.php');
             exit;
         }else{
-            header('Location: ../../vistas/login.php');
+            header('location: ../../login.php');
             exit;
         }
     }else{

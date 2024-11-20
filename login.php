@@ -23,7 +23,7 @@
                         <input type="password" name="password" placeholder="Contraseña" required>
                         <input type="submit" class="boton" value="Iniciar sesion">
                     </form>
-                    <a href="vistas/registro.html" class="registrar">Registrarse</a>
+                    <a href="vistas/registro.php" class="registrar">Registrarse</a>
                 </div>
             </div>
         </main>

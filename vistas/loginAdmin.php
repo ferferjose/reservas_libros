@@ -15,7 +15,7 @@
                     <h1>INICIO ADMINISTRADOR</h1>
                     <hr class="divider">
                     <form action="../modelo/LoginRegistro/loginAdmin.php" method="POST">
-                        <input type="email" name="email" placeholder="Correo" required>
+                        <input type="text" name="user" placeholder="Usuario Admin" required>
                         <input type="password" name="password" placeholder="Contraseña" required>
                         <input type="submit" class="boton" value="Iniciar sesion">
                     </form>

@@ -3,7 +3,7 @@
         private $conexion;
 
         public function __construct(){
-            require_once '../modelo/conexion.php';
+            require_once __DIR__ . '/../modelo/conexion.php';
             $this->conexion = $conexion;
         }
 
