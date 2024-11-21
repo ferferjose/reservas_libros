@@ -1,13 +1,17 @@
 <?php
-    class Usuarios{
-        private $email;
-        private $pw;
-        private $pwBd;
+    class MUsuarios {
         private $conexion;
+        private $pwBd;
+        private $pw;
+
+        private $email;
 
         public function __construct(){
-            require_once __DIR__ . '/../modelo/conexion.php';
-            $this->conexion = $conexion;
+            require_once __DIR__ . '/../assets/config/configDb.php';
+            $this->conexion = new mysqli(SERVIDOR, USUARIO, PASSWORD, BBDD);
+            $this->conexion->set_charset("utf8"); 
+            $controlador = new mysqli_driver();
+            $controlador->report_mode = MYSQLI_REPORT_OFF;
         }
 
         public function login($email, $password) {
@@ -22,25 +26,6 @@
             }
             else
                 return false;
-        }
-
-        public function registro($email, $password, $password2){
-            $this->email = $email;
-
-            $sql = "SELECT * FROM usuarios WHERE correo = '".$this->email."'";
-
-            $resultado = $this->conexion->query($sql);
-            if($resultado->num_rows <= 0){
-                if($password === $password2){
-                    $this->pw = password_hash($password, PASSWORD_DEFAULT);
-                    if($this->insertarUsuario()){
-                        $this->sesionInicio();
-                        return true;
-                    }
-                }  
-                return false;
-            }
-            return false;
         }
 
         private function obtenerContraseñaBd (){
@@ -66,6 +51,25 @@
                 $_SESSION['rol'] = $fila['rol'];
             }
             
+        }
+
+        public function registro($email, $password, $password2){
+            $this->email = $email;
+
+            $sql = "SELECT * FROM usuarios WHERE correo = '".$this->email."'";
+
+            $resultado = $this->conexion->query($sql);
+            if($resultado->num_rows <= 0){
+                if($password === $password2){
+                    $this->pw = password_hash($password, PASSWORD_DEFAULT);
+                    if($this->insertarUsuario()){
+                        $this->sesionInicio();
+                        return true;
+                    }
+                }  
+                return false;
+            }
+            return false;
         }
 
         private function insertarUsuario() {

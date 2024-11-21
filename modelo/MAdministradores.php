@@ -1,10 +1,13 @@
 <?php
-    class Administradores {
+    class MAdministradores {
         private $conexion;
 
         public function __construct(){
-            require_once __DIR__ . '/../modelo/conexion.php';
-            $this->conexion = $conexion;
+            require_once __DIR__ . '/../assets/config/configDb.php';
+            $this->conexion = new mysqli(SERVIDOR, USUARIO, PASSWORD, BBDD);
+            $this->conexion->set_charset("utf8"); 
+            $controlador = new mysqli_driver();
+            $controlador->report_mode = MYSQLI_REPORT_OFF;
         }
 
         public function inicioSesion($usuario,$password) {
@@ -22,4 +25,6 @@
             }
             return false;
         }
+
     }
+?>
