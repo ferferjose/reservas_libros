@@ -1,7 +1,6 @@
 <?php
     define("RUTA", $_SERVER['DOCUMENT_ROOT'] . '/ReservaLibros/reservas_libros/');
 
-    require_once RUTA . 'assets/config/config.php';
     require_once RUTA . 'controladores/Administradores.php';
 
     if (!empty($_POST['user']) && !empty($_POST['password'])) {

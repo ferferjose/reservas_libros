@@ -23,6 +23,15 @@
                         <input type="password" name="password" placeholder="Contraseña" required>
                         <input type="submit" class="boton" value="Iniciar sesion">
                     </form>
+                    <br>
+                    <p>
+                        <?php
+                            if(isset($_GET['msj'])){
+                                $msj = $_GET['msj'];
+                                echo $msj;
+                            }
+                        ?>
+                    </p>
                     <a href="vistas/registro.php" class="registrar">Registrarse</a>
                 </div>
             </div>
