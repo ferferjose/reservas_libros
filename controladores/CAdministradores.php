@@ -3,7 +3,7 @@
         private $objMAdmin;
 
         public function __construct(){
-            require_once __DIR__ . '/../modelo/MUsuarios.php';
+            require_once __DIR__ . '/../modelo/MAdministradores.php';
             $this->objMAdmin = new MAdministradores();
         }
 
